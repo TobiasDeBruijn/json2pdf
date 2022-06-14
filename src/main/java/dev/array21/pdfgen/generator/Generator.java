@@ -3,6 +3,8 @@ package dev.array21.pdfgen.generator;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.IBlockElement;
+import com.itextpdf.layout.element.Image;
 import dev.array21.pdfgen.protocol.DocumentSpecification;
 import dev.array21.pdfgen.protocol.Element;
 
@@ -20,7 +22,13 @@ public class Generator {
 
         if(spec.elements != null) {
             for(Element element : spec.elements) {
-                document.add(element.apply());
+                // Yuck
+                Object inner = element.apply().get();
+                if(inner instanceof IBlockElement) {
+                    document.add((IBlockElement) inner);
+                } else if (inner instanceof Image) {
+                    document.add((Image) inner);
+                }
             }
         }
 

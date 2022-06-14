@@ -7,6 +7,7 @@ import dev.array21.pdfgen.RuntimeTypeAdapterFactory;
 import dev.array21.pdfgen.generator.Generator;
 import dev.array21.pdfgen.protocol.Element;
 import dev.array21.pdfgen.protocol.GenerateRequest;
+import dev.array21.pdfgen.protocol.elements.ImageElement;
 import dev.array21.pdfgen.protocol.elements.ParagraphElement;
 import dev.array21.pdfgen.protocol.elements.table.TableElement;
 import org.springframework.http.HttpStatus;
@@ -24,7 +25,8 @@ public class Generate {
     public @ResponseBody ResponseEntity<byte[]> generate(@RequestBody String body) {
         RuntimeTypeAdapterFactory<Element> runtimeTypeAdapterFactory = RuntimeTypeAdapterFactory.of(Element.class)
                 .registerSubtype(ParagraphElement.class)
-                .registerSubtype(TableElement.class);
+                .registerSubtype(TableElement.class)
+                .registerSubtype(ImageElement.class);
 
         Gson gson = new GsonBuilder()
                 .registerTypeAdapterFactory(runtimeTypeAdapterFactory)

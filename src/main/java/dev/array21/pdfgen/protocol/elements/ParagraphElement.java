@@ -9,6 +9,7 @@ import dev.array21.pdfgen.protocol.Element;
 import dev.array21.pdfgen.protocol.IElement;
 import dev.array21.pdfgen.util.ColorUtil;
 import dev.array21.pdfgen.util.ElementUtil;
+import dev.array21.pdfgen.util.PdfElement;
 
 public class ParagraphElement extends Element implements IElement {
 
@@ -22,7 +23,7 @@ public class ParagraphElement extends Element implements IElement {
     }
 
     @Override
-    public IBlockElement apply() {
+    public PdfElement<Paragraph> apply() {
         int[] fontColor = ColorUtil.getColors(this.content.fontColor);
         Paragraph paragraph = new Paragraph(this.content.text)
                 .setFontSize(this.content.fontSize)
@@ -30,7 +31,7 @@ public class ParagraphElement extends Element implements IElement {
 
         ElementUtil.applyBorder(paragraph, this.content.borderSettings);
 
-        return paragraph;
+        return new PdfElement<>(paragraph);
     }
 }
 

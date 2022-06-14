@@ -1,14 +1,12 @@
 package dev.array21.pdfgen.protocol.elements.table;
 
 import com.itextpdf.layout.Document;
-import com.itextpdf.layout.element.AbstractElement;
-import com.itextpdf.layout.element.Cell;
-import com.itextpdf.layout.element.IBlockElement;
-import com.itextpdf.layout.element.Table;
+import com.itextpdf.layout.element.*;
 import dev.array21.pdfgen.protocol.BorderSettings;
 import dev.array21.pdfgen.protocol.Element;
 import dev.array21.pdfgen.protocol.IElement;
 import dev.array21.pdfgen.util.ElementUtil;
+import dev.array21.pdfgen.util.PdfElement;
 
 public class TableElement extends Element implements IElement  {
     private TableContent content;
@@ -20,7 +18,7 @@ public class TableElement extends Element implements IElement  {
     }
 
     @Override
-    public IBlockElement apply() {
+    public PdfElement<Table> apply() {
         float[] layout = new float[this.content.rows[0].columns.length];
         if(this.content.pointLayout != null) {
             layout = this.content.pointLayout;
@@ -39,7 +37,12 @@ public class TableElement extends Element implements IElement  {
 
                     if(column.elements != null) {
                         for(Element element : column.elements) {
-                            cell.add(element.apply());
+                            Object inner = element.apply().get();
+                            if(inner instanceof IBlockElement) {
+                                cell.add((IBlockElement) inner);
+                            } else if(inner instanceof Image) {
+                                cell.add((Image) inner);
+                            }
                         }
                     }
 
@@ -48,6 +51,6 @@ public class TableElement extends Element implements IElement  {
             }
         }
 
-        return table;
+        return new PdfElement<>(table);
     }
 }
