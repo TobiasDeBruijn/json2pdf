@@ -7,7 +7,6 @@ import com.itextpdf.layout.element.Paragraph;
 import dev.array21.pdfgen.element.content.ParagraphContent;
 import dev.array21.pdfgen.util.ColorUtil;
 import dev.array21.pdfgen.util.ElementUtil;
-import dev.array21.pdfgen.util.PdfElement;
 
 @JsonAutoDetect
 public class ParagraphElement extends Element<ParagraphContent> implements Convertable {

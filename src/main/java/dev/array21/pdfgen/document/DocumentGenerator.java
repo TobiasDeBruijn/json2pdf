@@ -4,7 +4,7 @@ import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
 import dev.array21.pdfgen.element.Convertable;
-import dev.array21.pdfgen.util.PdfElement;
+import dev.array21.pdfgen.element.PdfElement;
 import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayOutputStream;

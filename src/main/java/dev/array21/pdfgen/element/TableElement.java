@@ -9,7 +9,6 @@ import dev.array21.pdfgen.element.content.TableContent;
 import dev.array21.pdfgen.element.table.Column;
 import dev.array21.pdfgen.element.table.Row;
 import dev.array21.pdfgen.util.ElementUtil;
-import dev.array21.pdfgen.util.PdfElement;
 
 @JsonAutoDetect
 public class TableElement extends Element<TableContent> {

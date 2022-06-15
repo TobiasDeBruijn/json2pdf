@@ -7,7 +7,6 @@ import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.layout.element.Image;
 import dev.array21.pdfgen.element.content.ImageContent;
 import dev.array21.pdfgen.util.ElementUtil;
-import dev.array21.pdfgen.util.PdfElement;
 
 @JsonAutoDetect
 public class ImageElement extends Element<ImageContent> implements Convertable {
