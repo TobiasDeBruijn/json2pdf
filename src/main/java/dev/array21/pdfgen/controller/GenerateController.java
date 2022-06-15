@@ -17,7 +17,7 @@ public class GenerateController {
         this.generator = generator;
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/generate", produces = "application/pdf")
+    @GetMapping(path = "/generate", produces = "application/pdf")
     public ResponseEntity<byte[]> generatePdf(@RequestBody DocumentSpecification specification) {
 
         byte[] pdf = generator.generate(specification);
