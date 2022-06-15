@@ -1,33 +1,32 @@
 package dev.array21.pdfgen.util;
 
 import com.itextpdf.layout.element.AbstractElement;
-import dev.array21.pdfgen.protocol.BorderSettings;
+import dev.array21.pdfgen.element.border.BorderSettings;
 
 public class ElementUtil {
 
-    public static AbstractElement applyBorder(AbstractElement element, BorderSettings borderSettings) {
+    public static void applyBorder(AbstractElement<?> element, BorderSettings borderSettings) {
         if(borderSettings == null) {
             element.setBorder(null);
-            return element;
+            return;
         }
 
-        if(borderSettings.top != null) {
-            element.setBorderTop(borderSettings.top.getBorder());
+        if(borderSettings.getTop() != null) {
+            element.setBorderTop(borderSettings.getTop().getBorder());
         }
 
-        if(borderSettings.bottom != null) {
-            element.setBorderBottom(borderSettings.bottom.getBorder());
+        if(borderSettings.getBottom() != null) {
+            element.setBorderBottom(borderSettings.getBottom().getBorder());
         }
 
-        if(borderSettings.left != null) {
-            element.setBorderLeft(borderSettings.left.getBorder());
+        if(borderSettings.getLeft() != null) {
+            element.setBorderLeft(borderSettings.getLeft().getBorder());
         }
 
-        if(borderSettings.right != null) {
-            element.setBorderRight(borderSettings.right.getBorder());
+        if(borderSettings.getRight() != null) {
+            element.setBorderRight(borderSettings.getRight().getBorder());
         }
 
-        return element;
     }
 
 }

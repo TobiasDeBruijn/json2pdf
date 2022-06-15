@@ -3,7 +3,8 @@ package dev.array21.pdfgen.util;
 import com.itextpdf.layout.element.IElement;
 
 public class PdfElement<T extends IElement> {
-    private T inner;
+
+    private final T inner;
 
     public PdfElement(T t) {
         this.inner = t;
