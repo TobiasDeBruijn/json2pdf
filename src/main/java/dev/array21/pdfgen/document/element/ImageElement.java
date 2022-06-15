@@ -1,11 +1,11 @@
-package dev.array21.pdfgen.element;
+package dev.array21.pdfgen.document.element;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.itextpdf.commons.utils.Base64;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.layout.element.Image;
-import dev.array21.pdfgen.element.content.ImageContent;
+import dev.array21.pdfgen.document.element.content.ImageContent;
 import dev.array21.pdfgen.util.ElementUtil;
 
 @JsonAutoDetect

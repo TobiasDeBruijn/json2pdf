@@ -1,9 +1,9 @@
-package dev.array21.pdfgen.element.table;
+package dev.array21.pdfgen.document.element.table;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import dev.array21.pdfgen.element.border.BorderSettings;
-import dev.array21.pdfgen.element.Element;
+import dev.array21.pdfgen.document.element.border.BorderSettings;
+import dev.array21.pdfgen.document.element.Element;
 
 @JsonAutoDetect
 public class Column {

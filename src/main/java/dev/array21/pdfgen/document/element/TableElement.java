@@ -1,13 +1,13 @@
-package dev.array21.pdfgen.element;
+package dev.array21.pdfgen.document.element;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.IBlockElement;
 import com.itextpdf.layout.element.Table;
-import dev.array21.pdfgen.element.content.TableContent;
-import dev.array21.pdfgen.element.table.Column;
-import dev.array21.pdfgen.element.table.Row;
+import dev.array21.pdfgen.document.element.content.TableContent;
+import dev.array21.pdfgen.document.element.table.Column;
+import dev.array21.pdfgen.document.element.table.Row;
 import dev.array21.pdfgen.util.ElementUtil;
 
 @JsonAutoDetect

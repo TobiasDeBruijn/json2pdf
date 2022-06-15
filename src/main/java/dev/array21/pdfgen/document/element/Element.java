@@ -1,10 +1,10 @@
-package dev.array21.pdfgen.element;
+package dev.array21.pdfgen.document.element;
 
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import dev.array21.pdfgen.element.content.Content;
+import dev.array21.pdfgen.document.element.content.Content;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
 @JsonSubTypes({

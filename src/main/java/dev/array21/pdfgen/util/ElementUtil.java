@@ -1,7 +1,7 @@
 package dev.array21.pdfgen.util;
 
 import com.itextpdf.layout.element.AbstractElement;
-import dev.array21.pdfgen.element.border.BorderSettings;
+import dev.array21.pdfgen.document.element.border.BorderSettings;
 
 public class ElementUtil {
 

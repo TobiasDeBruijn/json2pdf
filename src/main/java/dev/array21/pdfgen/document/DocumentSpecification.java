@@ -1,7 +1,7 @@
 package dev.array21.pdfgen.document;
 
 
-import dev.array21.pdfgen.element.Element;
+import dev.array21.pdfgen.document.element.Element;
 
 public class DocumentSpecification {
     private final Element<?>[] elements;

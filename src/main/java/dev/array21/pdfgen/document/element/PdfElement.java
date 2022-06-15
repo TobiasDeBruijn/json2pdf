@@ -1,4 +1,4 @@
-package dev.array21.pdfgen.element;
+package dev.array21.pdfgen.document.element;
 
 import com.itextpdf.layout.element.IElement;
 

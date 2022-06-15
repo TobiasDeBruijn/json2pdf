@@ -1,4 +1,4 @@
-package dev.array21.pdfgen.element.border;
+package dev.array21.pdfgen.document.element.border;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;

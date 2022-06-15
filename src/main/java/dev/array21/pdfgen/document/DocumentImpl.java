@@ -4,7 +4,7 @@ import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.IBlockElement;
 import com.itextpdf.layout.element.Image;
-import dev.array21.pdfgen.element.PdfElement;
+import dev.array21.pdfgen.document.element.PdfElement;
 
 
 public class DocumentImpl extends Document {

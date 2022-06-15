@@ -1,10 +1,10 @@
-package dev.array21.pdfgen.element;
+package dev.array21.pdfgen.document.element;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.itextpdf.kernel.colors.DeviceRgb;
 import com.itextpdf.layout.element.Paragraph;
-import dev.array21.pdfgen.element.content.ParagraphContent;
+import dev.array21.pdfgen.document.element.content.ParagraphContent;
 import dev.array21.pdfgen.util.ColorUtil;
 import dev.array21.pdfgen.util.ElementUtil;
 

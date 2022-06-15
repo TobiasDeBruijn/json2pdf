@@ -3,8 +3,8 @@ package dev.array21.pdfgen.document;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
-import dev.array21.pdfgen.element.Convertable;
-import dev.array21.pdfgen.element.PdfElement;
+import dev.array21.pdfgen.document.element.Convertable;
+import dev.array21.pdfgen.document.element.PdfElement;
 import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayOutputStream;

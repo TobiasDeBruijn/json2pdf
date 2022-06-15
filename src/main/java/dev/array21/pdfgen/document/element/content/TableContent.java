@@ -1,9 +1,9 @@
-package dev.array21.pdfgen.element.content;
+package dev.array21.pdfgen.document.element.content;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import dev.array21.pdfgen.element.border.BorderSettings;
-import dev.array21.pdfgen.element.table.Row;
+import dev.array21.pdfgen.document.element.border.BorderSettings;
+import dev.array21.pdfgen.document.element.table.Row;
 
 @JsonAutoDetect
 public class TableContent extends Content {

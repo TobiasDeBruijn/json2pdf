@@ -1,4 +1,4 @@
-package dev.array21.pdfgen.element.border;
+package dev.array21.pdfgen.document.element.border;
 
 public class BorderSettings {
     private BorderSpecification top;
