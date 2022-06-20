@@ -6,7 +6,7 @@ authors = ["Tobias de Bruijn <t.debruijn@array21.dev>"]
 description = "Client library for the json2pdf server"
 readme = "README.md"
 repository = "https://github.com/TobiasDeBruijn/json2pdf"
-license = "MIT or Apache-2.0"
+license = "MIT OR Apache-2.0"
 keywords = ["PDF", "json2pdf", "client"]
 categories = ["api-bindings", "multimedia"]
 
