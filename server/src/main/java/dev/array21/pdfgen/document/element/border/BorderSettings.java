@@ -6,16 +6,6 @@ public class BorderSettings {
     private BorderSpecification right;
     private BorderSpecification left;
 
-    public BorderSettings() {
-    }
-
-    public BorderSettings(BorderSpecification top, BorderSpecification bottom, BorderSpecification right, BorderSpecification left) {
-        this.top = top;
-        this.bottom = bottom;
-        this.right = right;
-        this.left = left;
-    }
-
     public BorderSpecification getTop() {
         return top;
     }

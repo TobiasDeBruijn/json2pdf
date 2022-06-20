@@ -9,7 +9,8 @@ import dev.array21.pdfgen.util.ColorUtil;
 
 @JsonAutoDetect
 public class BorderSpecification {
-    private float width;
+
+    private float width = 1f;
     // 6 character hexadecimal color without the '#'
     private String color;
 
@@ -30,15 +31,7 @@ public class BorderSpecification {
         return width;
     }
 
-    public void setWidth(float width) {
-        this.width = width;
-    }
-
     public String getColor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 }

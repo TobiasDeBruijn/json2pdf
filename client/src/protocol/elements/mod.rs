@@ -19,9 +19,9 @@ enum ElementData {
 
 #[derive(Debug, Clone, Serialize)]
 enum ElementType {
-    ImageContent,
-    ParagraphContent,
-    TableContent,
+    Image,
+    Paragraph,
+    Table,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -39,7 +39,7 @@ impl Element {
     /// Image element
     pub fn image(image: Image) -> Self {
         Self {
-            content_type: ElementType::ImageContent,
+            content_type: ElementType::Image,
             data: ElementData::Image(image),
             border_settings: None,
         }
@@ -48,7 +48,7 @@ impl Element {
     /// Table element
     pub fn table(table: Table) -> Self {
         Self {
-            content_type: ElementType::TableContent,
+            content_type: ElementType::Table,
             data: ElementData::Table(table),
             border_settings: None,
         }
@@ -57,7 +57,7 @@ impl Element {
     /// Paragraph element
     pub fn paragraph(paragraph: Paragraph) -> Self {
         Self {
-            content_type: ElementType::ParagraphContent,
+            content_type: ElementType::Paragraph,
             data: ElementData::Paragraph(paragraph),
             border_settings: None,
         }

@@ -14,6 +14,5 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'dev.array21:classvalidator:1.0.0'
     implementation 'com.itextpdf:itext7-core:7.2.2'
 }

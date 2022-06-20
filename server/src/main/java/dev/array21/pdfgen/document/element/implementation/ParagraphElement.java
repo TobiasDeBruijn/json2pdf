@@ -1,7 +1,8 @@
-package dev.array21.pdfgen.document.element.content;
+package dev.array21.pdfgen.document.element.implementation;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.itextpdf.kernel.colors.DeviceRgb;
 import com.itextpdf.layout.element.Paragraph;
 import dev.array21.pdfgen.document.element.Element;
@@ -14,9 +15,10 @@ import dev.array21.pdfgen.util.ElementUtil;
 @JsonAutoDetect
 public class ParagraphElement extends Element implements Convertable {
 
-    private String fontColor;
-    private float fontSize = 20f;
-    private String text;
+    private final String fontColor;
+    private final float fontSize = 20f;
+    @JsonProperty(required = true)
+    private final String text;
 
     @JsonCreator
     public ParagraphElement(BorderSettings borderSettings, String fontColor, String text) {
@@ -29,26 +31,13 @@ public class ParagraphElement extends Element implements Convertable {
         return fontSize;
     }
 
-    public void setFontSize(float fontSize) {
-        this.fontSize = fontSize;
-    }
-
     public String getText() {
         return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 
     public String getFontColor() {
         return fontColor;
     }
-
-    public void setFontColor(String fontColor) {
-        this.fontColor = fontColor;
-    }
-
     @Override
     public PdfElement<Paragraph> convert() {
         int[] fontColor = ColorUtil.getColors(this.getFontColor());

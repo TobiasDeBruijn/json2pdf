@@ -1,13 +1,15 @@
-package dev.array21.pdfgen.document.element.content.table;
+package dev.array21.pdfgen.document.element.implementation.table;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import dev.array21.pdfgen.document.element.border.BorderSettings;
 import dev.array21.pdfgen.document.element.Element;
 
 @JsonAutoDetect
 public class Column {
-    private Element[] elements;
+    @JsonProperty(required = true)
+    private final Element[] elements;
     private BorderSettings borderSettings;
 
     @JsonCreator
@@ -19,15 +21,7 @@ public class Column {
         return elements;
     }
 
-    public void setElements(Element[] elements) {
-        this.elements = elements;
-    }
-
     public BorderSettings getBorderSettings() {
         return borderSettings;
-    }
-
-    public void setBorderSettings(BorderSettings borderSettings) {
-        this.borderSettings = borderSettings;
     }
 }
