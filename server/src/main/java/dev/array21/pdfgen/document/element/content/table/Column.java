@@ -1,4 +1,4 @@
-package dev.array21.pdfgen.document.element.table;
+package dev.array21.pdfgen.document.element.content.table;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -7,19 +7,19 @@ import dev.array21.pdfgen.document.element.Element;
 
 @JsonAutoDetect
 public class Column {
-    private Element<?>[] elements;
+    private Element[] elements;
     private BorderSettings borderSettings;
 
     @JsonCreator
-    public Column(Element<?>[] elements) {
+    public Column(Element[] elements) {
         this.elements = elements;
     }
 
-    public Element<?>[] getElements() {
+    public Element[] getElements() {
         return elements;
     }
 
-    public void setElements(Element<?>[] elements) {
+    public void setElements(Element[] elements) {
         this.elements = elements;
     }
 

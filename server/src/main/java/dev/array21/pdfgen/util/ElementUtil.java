@@ -26,7 +26,5 @@ public class ElementUtil {
         if(borderSettings.getRight() != null) {
             element.setBorderRight(borderSettings.getRight().getBorder());
         }
-
     }
-
 }

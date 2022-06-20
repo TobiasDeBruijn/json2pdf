@@ -1,5 +1,5 @@
-use crate::protocol::elements::Element;
 use serde::Serialize;
+use crate::protocol::elements::Element;
 
 /// An image
 #[derive(Debug, Clone, Serialize)]

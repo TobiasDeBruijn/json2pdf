@@ -1,4 +1,4 @@
-package dev.array21.pdfgen.document.element.table;
+package dev.array21.pdfgen.document.element.content.table;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonCreator;
